@@ -204,7 +204,7 @@ termos = [
         "explicacao": "Mulher masculinizada"
     },
     {
-        "termo": "Camucá",
+        "termo": "Camatuê",
         "explicacao": "Cabeça"
     },
     {
