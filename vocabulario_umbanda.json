@@ -1,0 +1,344 @@
+{
+  "termos": [
+    {
+      "termo": "Babalô",
+      "explicacao": "Pai no Santo"
+    },
+    {
+      "termo": "Babá",
+      "explicacao": "Mãe no Santo"
+    },
+    {
+      "termo": "Babalorixá",
+      "explicacao": "Pai no Santo (Babalô) com sete anos de Terreiro aberto"
+    },
+    {
+      "termo": "Yalorixá",
+      "explicacao": "Mãe no Santo (Babá) com sete anos de Terreiro aberto"
+    },
+    {
+      "termo": "Amalá",
+      "explicacao": "Comida para o Santo"
+    },
+    {
+      "termo": "Oin",
+      "explicacao": "Mel"
+    },
+    {
+      "termo": "Ebó",
+      "explicacao": "Despacho com matança na Umbanda"
+    },
+    {
+      "termo": "Delogum",
+      "explicacao": "Arte de adivinhar pelos búzios"
+    },
+    {
+      "termo": "Ifá",
+      "explicacao": "Jogo de búzios"
+    },
+    {
+      "termo": "Egun",
+      "explicacao": "Todo espírito que já passou pelo mundo carnal"
+    },
+    {
+      "termo": "Kiumba",
+      "explicacao": "Espírito desencarnado com grande atraso em sua evolução - obsessor"
+    },
+    {
+      "termo": "Zombeteiro",
+      "explicacao": "Obsessor, o que se faz passar por outro, enganador"
+    },
+    {
+      "termo": "Agô",
+      "explicacao": "Licença (dar ou pedir)"
+    },
+    {
+      "termo": "Maleíme",
+      "explicacao": "Perdão (dar ou pedir)"
+    },
+    {
+      "termo": "Curiá",
+      "explicacao": "Comer a comida do Santo"
+    },
+    {
+      "termo": "Ajeun",
+      "explicacao": "Comer junto, em momento sagrado, alimentando corpo e alma"
+    },
+    {
+      "termo": "Abô",
+      "explicacao": "Água contendo ervas maceradas, vísceras e sangue de todos os animais mortos no Terreiro (serve de banho de descarrego)"
+    },
+    {
+      "termo": "Auê",
+      "explicacao": "Salve"
+    },
+    {
+      "termo": "Filho de Pemba",
+      "explicacao": "O médium no Terreiro"
+    },
+    {
+      "termo": "Toco",
+      "explicacao": "Refere-se à vela ou banco"
+    },
+    {
+      "termo": "Lebara",
+      "explicacao": "Pombo Gira"
+    },
+    {
+      "termo": "Cacurucia",
+      "explicacao": "A mais velha"
+    },
+    {
+      "termo": "Marombo (a)",
+      "explicacao": "Companheiro(a), marido ou esposa"
+    },
+    {
+      "termo": "Riscador",
+      "explicacao": "Fósforo ou algo para escrever (lápis)"
+    },
+    {
+      "termo": "Aparelho, Burro, Cavalo",
+      "explicacao": "Nomes dados ao médium que incorpora"
+    },
+    {
+      "termo": "Barra vento",
+      "explicacao": "O passar mal, balanceio prestes a incorporar"
+    },
+    {
+      "termo": "Cambono",
+      "explicacao": "Auxiliar de confiança para servir os Orixás"
+    },
+    {
+      "termo": "Cambono Calofé",
+      "explicacao": "Auxiliar de confiança nos rituais de iniciação, que conhece todos os segredos que a Umbanda tem e sabe respeitar os outros rituais"
+    },
+    {
+      "termo": "Neófito",
+      "explicacao": "Médiuns em iniciação"
+    },
+    {
+      "termo": "Achirê",
+      "explicacao": "Desincorporação completa"
+    },
+    {
+      "termo": "Pawô ou paô",
+      "explicacao": "Palmas compassadas com finalidade definida (bater paô)"
+    },
+    {
+      "termo": "Elédá",
+      "explicacao": "Anjo da Guarda"
+    },
+    {
+      "termo": "Samba",
+      "explicacao": "Cozinheira na Umbanda"
+    },
+    {
+      "termo": "Adarrum",
+      "explicacao": "É o toque feito seguidamente pelos atabaques quando da invocação dos Orixás por intermédio dos médiuns"
+    },
+    {
+      "termo": "Alguidar",
+      "explicacao": "Prato de barro para oferendas"
+    },
+    {
+      "termo": "Yabás",
+      "explicacao": "Orixás femininos (Povo D'água)"
+    },
+    {
+      "termo": "Yaô",
+      "explicacao": "Grau dentro do Terreiro que atinge o médium que fez a obrigação de Orixalá"
+    },
+    {
+      "termo": "Pai e Mãe Pequenos",
+      "explicacao": "Grau dentro do Terreiro que atinge o médium que fez Mão de Fogo"
+    },
+    {
+      "termo": "Ogã",
+      "explicacao": "Médium que toca atabaque"
+    },
+    {
+      "termo": "Ogã de sala",
+      "explicacao": "Médium que comanda e puxa os pontos cantados no Terreiro"
+    },
+    {
+      "termo": "Obi – Orobô",
+      "explicacao": "Sementes usadas nos rituais de iniciação"
+    },
+    {
+      "termo": "Amaci",
+      "explicacao": "Líquido preparado com ervas com diversas finalidades no Terreiro"
+    },
+    {
+      "termo": "Fundanga ou tuia",
+      "explicacao": "Pólvora"
+    },
+    {
+      "termo": "Urupema",
+      "explicacao": "Peneira usada no Terreiro"
+    },
+    {
+      "termo": "Ganga",
+      "explicacao": "Médium responsável pela matança de animais"
+    },
+    {
+      "termo": "Obé",
+      "explicacao": "Faca"
+    },
+    {
+      "termo": "Ponteiro",
+      "explicacao": "Punhal"
+    },
+    {
+      "termo": "Adjá",
+      "explicacao": "Campainha usada nas cerimônias de Terreiro"
+    },
+    {
+      "termo": "Afoxé",
+      "explicacao": "Dançar para o Santo"
+    },
+    {
+      "termo": "Adé",
+      "explicacao": "Homem afeminado"
+    },
+    {
+      "termo": "Ocurin",
+      "explicacao": "Mulher masculinizada"
+    },
+    {
+      "termo": "Camucá",
+      "explicacao": "Cabeça"
+    },
+    {
+      "termo": "Ori",
+      "explicacao": "Coro do médium"
+    },
+    {
+      "termo": "Cansuá",
+      "explicacao": "Onde moram as pessoas, lar"
+    },
+    {
+      "termo": "Coité",
+      "explicacao": "Recipiente utilizado para servir bebidas às Entidades. Normalmente feitas de cabaça ou casca de coco"
+    },
+    {
+      "termo": "Deká",
+      "explicacao": "Ritual do sétimo ano de iniciação sacerdotal"
+    },
+    {
+      "termo": "Cafua",
+      "explicacao": "Tranqueira"
+    },
+    {
+      "termo": "Abiã",
+      "explicacao": "Médium iniciante ao ritual Candomblé"
+    },
+    {
+      "termo": "Roncó",
+      "explicacao": "Local da feitura do santo no Candomblé"
+    },
+    {
+      "termo": "Jimbo",
+      "explicacao": "Dinheiro"
+    },
+    {
+      "termo": "Colofé",
+      "explicacao": "Bênção (dar ou pedir)"
+    },
+    {
+      "termo": "Jocó",
+      "explicacao": "Sentar"
+    },
+    {
+      "termo": "Addê",
+      "explicacao": "Levantar"
+    },
+    {
+      "termo": "Canjira",
+      "explicacao": "Local onde são realizadas danças religiosas ou 'o dono da Gira'"
+    },
+    {
+      "termo": "Piau",
+      "explicacao": "Animal novo"
+    },
+    {
+      "termo": "Guru Piau",
+      "explicacao": "Animal pequeno"
+    },
+    {
+      "termo": "Akokem",
+      "explicacao": "Galinha d’angola"
+    },
+    {
+      "termo": "Akikó",
+      "explicacao": "Galo"
+    },
+    {
+      "termo": "Menga",
+      "explicacao": "Sangue"
+    },
+    {
+      "termo": "Deburu",
+      "explicacao": "Pipocas"
+    },
+    {
+      "termo": "Otin",
+      "explicacao": "Bebida doce"
+    },
+    {
+      "termo": "Otin Dudu",
+      "explicacao": "Bebida escura"
+    },
+    {
+      "termo": "Omin",
+      "explicacao": "Água doce"
+    },
+    {
+      "termo": "Marafo",
+      "explicacao": "Cachaça"
+    },
+    {
+      "termo": "Atin",
+      "explicacao": "Pó de pemba"
+    },
+    {
+      "termo": "Função",
+      "explicacao": "Obrigações no Terreiro, preparações que antecedem qualquer Ritual"
+    },
+    {
+      "termo": "Bater cabeça",
+      "explicacao": "Cumprimentar respeitosa e humildemente, abaixando aos pés do Congá, Entidade Espiritual ou Pai/Mãe no Santo com a cabeça no chão"
+    },
+    {
+      "termo": "Jacutá",
+      "explicacao": "Onde habitam Xangô e Iansã"
+    },
+    {
+      "termo": "Aruanda",
+      "explicacao": "Onde vivem o Povo do Santo, reino de maior evolução na Terra"
+    },
+    {
+      "termo": "Umbral",
+      "explicacao": "Portal entre o mundo dos encarnados e o mundo dos desencarnados"
+    },
+    {
+      "termo": "Quelé",
+      "explicacao": "Período de três meses após rituais de iniciação"
+    },
+    {
+      "termo": "Axó",
+      "explicacao": "Roupa"
+    },
+    {
+      "termo": "Axó Funfun",
+      "explicacao": "Roupa branca"
+    },
+    {
+      "termo": "Axó Dudu",
+      "explicacao": "Roupa preta"
+    },
+    {
+      "termo": "Epó Pupá",
+      "explicacao": "Azeite de dendê"
+    }
+  ]
+}
