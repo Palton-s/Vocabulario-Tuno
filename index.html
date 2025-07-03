@@ -215,9 +215,9 @@
         </div>
 
         <div class="history-section">
-            <h4 class="mb-3">Histórico de Respostas</h4>
+            <h4 class="mb-3">Histórico de Erros</h4>
             <div id="history-list">
-                <p class="text-muted text-center">Nenhuma resposta ainda...</p>
+                <p class="text-muted text-center">Nenhum erro ainda...</p>
             </div>
         </div>
     </div>
@@ -304,7 +304,7 @@
                 button.classList.add('correct');
                 correctAnswers++;
                 showFeedback(true, correctAnswer);
-                addToHistory(correctAnswer, selectedOption, true);
+                // Não adiciona acertos ao histórico
             } else {
                 button.classList.add('incorrect');
                 // Highlight the correct answer
@@ -378,7 +378,7 @@
             const historyList = document.getElementById('history-list');
             
             if (history.length === 0) {
-                historyList.innerHTML = '<p class="text-muted text-center">Nenhuma resposta ainda...</p>';
+                historyList.innerHTML = '<p class="text-muted text-center">Nenhum erro ainda...</p>';
                 return;
             }
             
@@ -386,7 +386,7 @@
             
             history.slice(-10).reverse().forEach(item => {
                 const div = document.createElement('div');
-                div.className = `history-item ${item.isCorrect ? 'history-correct' : 'history-incorrect'}`;
+                div.className = 'history-item history-incorrect';
                 
                 // Find the term's explanation
                 const termData = termos.find(t => t.termo === item.correct);
@@ -396,12 +396,12 @@
                 content.innerHTML = `
                     <strong>${item.correct}</strong><br>
                     <small style="font-style: italic; color: #666;">${termExplanation}</small><br>
-                    <small style="color: ${item.isCorrect ? '#155724' : '#721c24'};">Você respondeu: ${item.selected}</small>
+                    <small style="color: #721c24;">Você respondeu: ${item.selected}</small>
                 `;
                 
                 const status = document.createElement('div');
                 status.innerHTML = `
-                    <span>${item.isCorrect ? '✅' : '❌'}</span><br>
+                    <span>❌</span><br>
                     <small>${item.timestamp}</small>
                 `;
                 
