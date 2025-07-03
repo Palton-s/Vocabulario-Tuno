@@ -225,7 +225,7 @@ termos = [
     },
     {
         "termo": "Cafua",
-        "explicacao": "Tranqueira"
+        "explicacao": "Trunqueira"
     },
     {
         "termo": "Abiã",
