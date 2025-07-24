@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUNO - Quiz de Símbolos</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/css/tom-select.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .quiz-container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .logo {
+            max-width: 60px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .quiz-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        .orixa-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .orixa-name {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+        .orixa-color {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            font-weight: 500;
+        }
+        .color-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            border-radius: 25px;
+            color: white;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+            margin-left: 10px;
+        }
+        .symbols-count {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+        .search-section {
+            margin-bottom: 30px;
+        }
+        .search-label {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #495057;
+        }
+        .ts-control {
+            min-height: 50px;
+            font-size: 1.1rem;
+        }
+        .ts-dropdown .option {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        .option-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .option-name {
+            font-weight: 600;
+        }
+        .option-color {
+            padding: 4px 12px;
+            border-radius: 15px;
+            color: white;
+            font-size: 0.9rem;
+            text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+        }
+        .selected-symbols {
+            margin-bottom: 30px;
+        }
+        .symbols-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        .symbol-item {
+            text-align: center;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .symbol-image {
+            max-width: 80px;
+            max-height: 80px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+        .symbol-name {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #495057;
+        }
+        .progress-section {
+            margin-bottom: 30px;
+        }
+        .progress-info {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .progress-text {
+            font-weight: 600;
+            color: #495057;
+        }
+        .next-btn {
+            background-color: #28a745;
+            border-color: #28a745;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+        .next-btn:hover {
+            background-color: #218838;
+            border-color: #1e7e34;
+        }
+        .next-btn:disabled {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            cursor: not-allowed;
+        }
+        .navigation-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+            margin-bottom: 20px;
+        }
+        .nav-buttons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .btn-nav {
+            border-radius: 25px;
+            padding: 10px 20px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .results-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .final-score {
+            font-size: 3rem;
+            font-weight: bold;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .final-message {
+            font-size: 1.3rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="header-section">
+            <img src="logo.png" alt="Logo TUNO" class="logo">
+            <h1 class="display-4 mb-3">TUNO</h1>
+            <p class="lead">Quiz de Símbolos dos Orixás</p>
+        </div>
+
+        <!-- Seção do Quiz -->
+        <div id="quiz-section" class="quiz-card">
+            <div class="orixa-header">
+                <div id="orixa-name" class="orixa-name">Carregando...</div>
+                <div class="orixa-color">
+                    Cor: <span id="color-badge" class="color-badge">...</span>
+                </div>
+                <div id="symbols-count" class="symbols-count">
+                    Encontre os <span id="total-symbols">0</span> símbolos deste Orixá
+                </div>
+            </div>
+
+            <div class="search-section">
+                <div class="search-label">Digite o nome de um símbolo:</div>
+                <select id="symbol-search" placeholder="Digite para buscar símbolos..."></select>
+            </div>
+
+            <div class="progress-section">
+                <div class="progress-info">
+                    <span class="progress-text">Progresso:</span>
+                    <span id="progress-counter" class="progress-text">0 / 0</span>
+                </div>
+                <div class="progress">
+                    <div id="progress-bar" class="progress-bar bg-success" role="progressbar" style="width: 0%"></div>
+                </div>
+            </div>
+
+            <div class="selected-symbols">
+                <h5>Símbolos Encontrados:</h5>
+                <div id="symbols-grid" class="symbols-grid">
+                    <!-- Símbolos selecionados aparecerão aqui -->
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button id="next-btn" class="btn next-btn" onclick="nextOrixa()" disabled>
+                    Próximo Orixá
+                </button>
+            </div>
+        </div>
+
+        <!-- Seção de Resultados -->
+        <div id="results-section" class="results-section" style="display: none;">
+            <h2>Parabéns! Quiz Concluído!</h2>
+            <div id="final-score" class="final-score">100%</div>
+            <div class="final-message">
+                Você completou o quiz de símbolos dos Orixás!
+            </div>
+            <button class="btn btn-primary btn-lg" onclick="restartQuiz()">
+                🔄 Reiniciar Quiz
+            </button>
+        </div>
+
+        <!-- Navegação -->
+        <div class="navigation-section">
+            <h5 class="mb-4">Outras Opções de Quiz</h5>
+            <div class="nav-buttons">
+                <a href="index.html" class="btn btn-secondary btn-nav">🏠 Página Inicial</a>
+                <a href="vocabulario.html" class="btn btn-primary btn-nav">📚 Vocabulário</a>
+                <a href="saudacoes.html" class="btn btn-warning btn-nav">🙏 Saudações</a>
+                <a href="sincretismos.html" class="btn btn-info btn-nav">⚖️ Sincretismos</a>
+                <a href="sincretismosXango.html" class="btn btn-danger btn-nav">⚡ Sincretismos de Xangô</a>
+                <a href="chefesDeFalanges.html" class="btn btn-outline-warning btn-nav">👑 Chefes de Falange</a>
+                <button class="btn btn-success btn-nav" onclick="restartQuiz()">🔄 Reiniciar Quiz</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tom-select@2.2.2/dist/js/tom-select.complete.min.js"></script>
+    <script src="simbolos.js"></script>
+    <script src="simbolos_quiz.js"></script>
+</body>
+</html>

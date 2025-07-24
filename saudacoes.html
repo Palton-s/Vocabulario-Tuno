@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Saudações da Umbanda</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .quiz-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .question-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        .question-text {
+            font-size: 1.2rem;
+            line-height: 1.6;
+            color: #495057;
+            margin-bottom: 30px;
+            text-align: center;
+            font-weight: bold;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 30px;
+        }
+        .option-btn {
+            padding: 15px 20px;
+            border: 2px solid #dee2e6;
+            background: white;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
+        }
+        .option-btn:hover {
+            border-color: #007bff;
+            background-color: #f8f9ff;
+        }
+        .option-btn.correct {
+            background-color: #28a745;
+            color: white;
+            border-color: #28a745;
+        }
+        .option-btn.incorrect {
+            background-color: #dc3545;
+            color: white;
+            border-color: #dc3545;
+        }
+        .option-btn:disabled {
+            cursor: not-allowed;
+        }
+        .score-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .score-item {
+            display: inline-block;
+            margin: 0 20px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+        .score-correct {
+            background-color: #d4edda;
+            color: #155724;
+        }
+        .score-incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .feedback-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+        .feedback-content {
+            background: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            max-width: 500px;
+            margin: 20px;
+        }
+        .feedback-text {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .feedback-correct {
+            color: #28a745;
+        }
+        .feedback-incorrect {
+            color: #dc3545;
+        }
+        .next-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .next-btn:hover {
+            background-color: #0056b3;
+        }
+        .history-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 20px;
+            margin-top: 30px;
+        }
+        .history-item {
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .history-incorrect {
+            background-color: #f8d7da;
+            color: #721c24;
+        }
+        .restart-btn {
+            background-color: #6c757d;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+        .restart-btn:hover {
+            background-color: #545b62;
+        }
+        .home-btn {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            padding: 10px 25px;
+            border-radius: 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            margin: 0 10px;
+        }
+        .home-btn:hover {
+            background-color: #1e7e34;
+        }
+        .logo {
+            max-width: 60px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .navigation-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .btn-nav {
+            padding: 12px 25px;
+            font-size: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+        .btn-nav:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div class="header-section">
+            <img src="logo.png" alt="Logo Quiz Saudações" class="logo">
+            <h1 class="display-4 mb-3">Saudações TUNO</h1>
+            <p class="lead">Teste seus conhecimentos em saudações da Umbanda</p>
+        </div>
+
+        <div class="score-section">
+            <div class="score-item score-correct">
+                <i class="fas fa-check-circle"></i>
+                Acertos: <span id="correct-count">0</span>
+            </div>
+            <div class="score-item score-incorrect">
+                <i class="fas fa-times-circle"></i>
+                Erros: <span id="incorrect-count">0</span>
+            </div>
+            <div class="score-item">
+                <strong>Total: <span id="total-count">0</span></strong>
+            </div>
+        </div>
+
+        <div id="quiz-section">
+            <div class="question-card">
+                <div class="question-text" id="question-text">
+                    Carregando pergunta...
+                </div>
+                <div class="options-grid" id="options-grid">
+                    <!-- Options will be dynamically generated -->
+                </div>
+            </div>
+        </div>
+
+        <div class="navigation-section">
+            <h5 class="mb-4">Outras Opções de Quiz</h5>
+            <div class="nav-buttons">
+                <a href="index.html" class="btn btn-secondary btn-nav">🏠 Página Inicial</a>
+                <a href="vocabulario.html" class="btn btn-primary btn-nav">📚 Vocabulário</a>
+                <a href="sincretismos.html" class="btn btn-info btn-nav">⚖️ Sincretismos</a>
+                <a href="sincretismosXango.html" class="btn btn-danger btn-nav">⚡ Sincretismos de Xangô</a>
+                <a href="chefesDeFalanges.html" class="btn btn-dark btn-nav">👑 Chefes de Falange</a>
+                <a href="simbolos.html" class="btn btn-outline-danger btn-nav">🔯 Símbolos</a>
+                <button class="btn btn-success btn-nav" onclick="restartQuiz()">🔄 Reiniciar Quiz</button>
+            </div>
+        </div>
+
+        <div class="history-section">
+            <h4 class="mb-3">Histórico de Erros</h4>
+            <div id="history-list">
+                <p class="text-muted text-center">Nenhum erro ainda...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Feedback Overlay -->
+    <div id="feedback-overlay" class="feedback-overlay" style="display: none;">
+        <div class="feedback-content">
+            <div id="feedback-text" class="feedback-text"></div>
+            <div id="feedback-explanation" class="mb-3"></div>
+            <button class="next-btn" onclick="nextQuestion()">Próxima Pergunta</button>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="saudacoes.js"></script>
+    <script>
+        // Use o array saudacoes carregado do arquivo saudacoes.js
+        const termos = saudacoes;
+
+        let currentQuestion = 0;
+        let correctAnswers = 0;
+        let incorrectAnswers = 0;
+        let currentOptions = [];
+        let correctAnswer = "";
+        let history = [];
+        let usedQuestions = [];
+
+        function shuffleArray(array) {
+            const shuffled = [...array];
+            for (let i = shuffled.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+            }
+            return shuffled;
+        }
+
+        function generateOptions(correctTerm) {
+            const otherTerms = termos.filter(t => t.termo !== correctTerm);
+            const shuffledOthers = shuffleArray(otherTerms);
+            const maxOptions = Math.min(7, otherTerms.length);
+            const options = [correctTerm, ...shuffledOthers.slice(0, maxOptions).map(t => t.termo)];
+            return shuffleArray(options);
+        }
+
+        function loadQuestion() {
+            if (usedQuestions.length === termos.length) {
+                showCompletionMessage();
+                return;
+            }
+
+            let availableQuestions = termos.filter((_, index) => !usedQuestions.includes(index));
+            let randomIndex = Math.floor(Math.random() * availableQuestions.length);
+            let selectedQuestion = availableQuestions[randomIndex];
+            
+            // Find the original index
+            let originalIndex = termos.findIndex(t => t.termo === selectedQuestion.termo);
+            usedQuestions.push(originalIndex);
+
+            currentQuestion = originalIndex;
+            correctAnswer = selectedQuestion.termo;
+            currentOptions = generateOptions(correctAnswer);
+
+            document.getElementById('question-text').textContent = selectedQuestion.explicacao;
+            
+            const optionsGrid = document.getElementById('options-grid');
+            optionsGrid.innerHTML = '';
+            
+            currentOptions.forEach(option => {
+                const button = document.createElement('button');
+                button.className = 'option-btn';
+                button.textContent = option;
+                button.onclick = () => selectAnswer(option, button);
+                optionsGrid.appendChild(button);
+            });
+
+            updateScore();
+        }
+
+        function selectAnswer(selectedOption, button) {
+            const isCorrect = selectedOption === correctAnswer;
+            const allButtons = document.querySelectorAll('.option-btn');
+            
+            // Disable all buttons
+            allButtons.forEach(btn => btn.disabled = true);
+            
+            if (isCorrect) {
+                button.classList.add('correct');
+                correctAnswers++;
+                showFeedback(true, correctAnswer);
+                // Não adiciona acertos ao histórico
+            } else {
+                button.classList.add('incorrect');
+                // Highlight the correct answer
+                allButtons.forEach(btn => {
+                    if (btn.textContent === correctAnswer) {
+                        btn.classList.add('correct');
+                    }
+                });
+                incorrectAnswers++;
+                showFeedback(false, correctAnswer);
+                addToHistory(correctAnswer, selectedOption, false);
+            }
+            
+            updateScore();
+        }
+
+        function showFeedback(isCorrect, correctTerm) {
+            const overlay = document.getElementById('feedback-overlay');
+            const feedbackText = document.getElementById('feedback-text');
+            const feedbackExplanation = document.getElementById('feedback-explanation');
+            
+            // Find the term's explanation
+            const termData = termos.find(t => t.termo === correctTerm);
+            const termExplanation = termData ? termData.explicacao : '';
+            
+            if (isCorrect) {
+                feedbackText.textContent = 'CORRETO! 🎉';
+                feedbackText.className = 'feedback-text feedback-correct';
+                feedbackExplanation.innerHTML = `
+                    <strong>Você acertou!</strong><br><br>
+                    <strong style="font-size: 1.2em; color: #28a745;">${correctTerm}</strong><br>
+                    <span style="font-style: italic; color: #666; line-height: 1.4;">${termExplanation}</span>
+                `;
+            } else {
+                feedbackText.textContent = 'INCORRETO! ❌';
+                feedbackText.className = 'feedback-text feedback-incorrect';
+                feedbackExplanation.innerHTML = `
+                    <strong>A resposta correta era:</strong><br><br>
+                    <strong style="font-size: 1.2em; color: #dc3545;">${correctTerm}</strong><br>
+                    <span style="font-style: italic; color: #666; line-height: 1.4;">${termExplanation}</span>
+                `;
+            }
+            
+            overlay.style.display = 'flex';
+        }
+
+        function nextQuestion() {
+            document.getElementById('feedback-overlay').style.display = 'none';
+            loadQuestion();
+        }
+
+        function updateScore() {
+            document.getElementById('correct-count').textContent = correctAnswers;
+            document.getElementById('incorrect-count').textContent = incorrectAnswers;
+            document.getElementById('total-count').textContent = correctAnswers + incorrectAnswers;
+        }
+
+        function addToHistory(correctTerm, selectedTerm, isCorrect) {
+            const historyItem = {
+                correct: correctTerm,
+                selected: selectedTerm,
+                isCorrect: isCorrect,
+                timestamp: new Date().toLocaleTimeString()
+            };
+            
+            history.push(historyItem);
+            updateHistoryDisplay();
+        }
+
+        function updateHistoryDisplay() {
+            const historyList = document.getElementById('history-list');
+            
+            if (history.length === 0) {
+                historyList.innerHTML = '<p class="text-muted text-center">Nenhum erro ainda...</p>';
+                return;
+            }
+            
+            historyList.innerHTML = '';
+            
+            history.slice(-10).reverse().forEach(item => {
+                const div = document.createElement('div');
+                div.className = 'history-item history-incorrect';
+                
+                // Find the term's explanation
+                const termData = termos.find(t => t.termo === item.correct);
+                const termExplanation = termData ? termData.explicacao : '';
+                
+                const content = document.createElement('div');
+                content.innerHTML = `
+                    <strong>${item.correct}</strong><br>
+                    <small style="font-style: italic; color: #666;">${termExplanation}</small><br>
+                    <small style="color: #721c24;">Você respondeu: ${item.selected}</small>
+                `;
+                
+                const status = document.createElement('div');
+                status.innerHTML = `
+                    <span>❌</span><br>
+                    <small>${item.timestamp}</small>
+                `;
+                
+                div.appendChild(content);
+                div.appendChild(status);
+                historyList.appendChild(div);
+            });
+        }
+
+        function showCompletionMessage() {
+            const overlay = document.getElementById('feedback-overlay');
+            const feedbackText = document.getElementById('feedback-text');
+            const feedbackExplanation = document.getElementById('feedback-explanation');
+            
+            feedbackText.textContent = 'Quiz Completo! 🎊';
+            feedbackText.className = 'feedback-text feedback-correct';
+            feedbackExplanation.innerHTML = `
+                <strong>Parabéns!</strong><br>
+                Você completou todas as perguntas!<br>
+                Acertos: ${correctAnswers}<br>
+                Erros: ${incorrectAnswers}<br>
+                Precisão: ${((correctAnswers / (correctAnswers + incorrectAnswers)) * 100).toFixed(1)}%
+            `;
+            
+            document.querySelector('.next-btn').textContent = 'Reiniciar Quiz';
+            document.querySelector('.next-btn').onclick = restartQuiz;
+            
+            overlay.style.display = 'flex';
+        }
+
+        function restartQuiz() {
+            correctAnswers = 0;
+            incorrectAnswers = 0;
+            currentQuestion = 0;
+            history = [];
+            usedQuestions = [];
+            
+            document.getElementById('feedback-overlay').style.display = 'none';
+            document.querySelector('.next-btn').textContent = 'Próxima Pergunta';
+            document.querySelector('.next-btn').onclick = nextQuestion;
+            
+            updateScore();
+            updateHistoryDisplay();
+            loadQuestion();
+        }
+
+        function goHome() {
+            window.location.href = 'index.html';
+        }
+
+        // Initialize the quiz
+        document.addEventListener('DOMContentLoaded', function() {
+            loadQuestion();
+        });
+    </script>
+</body>
+</html>

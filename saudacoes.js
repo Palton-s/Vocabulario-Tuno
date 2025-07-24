@@ -1,0 +1,20 @@
+const saudacoes = [
+    { termo: "Pai Oxalá", explicacao: "Êepa Babá" },
+    { termo: "Xangô", explicacao: "Kao Kabecile (Salve o Rei)" },
+    { termo: "Ibeji", explicacao: "Oni Beijada" },
+    { termo: "Iemanjá", explicacao: "Odociaba ou Odoyá" },
+    { termo: "Oxum", explicacao: "Atêiê Omin" },
+    { termo: "Iansã", explicacao: "Eparrei Iansã" },
+    { termo: "Nanã Buruquê", explicacao: "Saluba Nanã" },
+    { termo: "Oxóssi", explicacao: "Okê Bambociíne / Okê Arô" },
+    { termo: "Ogum", explicacao: "Ogum Iê" },
+    { termo: "Obaluê / Omolu", explicacao: "Atotô" },
+    { termo: "São Miguel e Pretos-Velhos", explicacao: "Adorei as Almas" },
+    { termo: "Marinheiro", explicacao: "Aruba Marinho" },
+    { termo: "Boiadeiro", explicacao: "Epahé Boiadeiro, Arubachê, Getruá" },
+    { termo: "Povo Cigano", explicacao: "Optchá" },
+    { termo: "Povo do Oriente", explicacao: "Ori Osorium" },
+    { termo: "Exu", explicacao: "Laroyê" },
+    { termo: "Tranca Rua", explicacao: "Aleluia ou Onoluá" },
+    { termo: "Bará", explicacao: "Moju Bará" }
+];

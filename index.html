@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Quiz Vocabulário Técnico</title>
+    <title>TUNO - Vocabulário e Saudações da Umbanda</title>
     <link rel="icon" type="image/png" href="logo.png">
     <link rel="shortcut icon" type="image/png" href="logo.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,440 +17,220 @@
             margin: 0 auto;
             padding: 20px;
         }
-        .question-card {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 40px;
+        .header-section {
+            text-align: center;
             margin-bottom: 30px;
-        }
-        .question-text {
-            font-size: 1.2rem;
-            line-height: 1.6;
-            color: #495057;
-            margin-bottom: 30px;
-            text-align: center;
-            font-weight: bold;
-        }
-        .options-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 15px;
-            margin-top: 30px;
-        }
-        .option-btn {
-            padding: 15px 20px;
-            border: 2px solid #dee2e6;
-            background: white;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            cursor: pointer;
-            text-align: center;
-            font-size: 1rem;
-        }
-        .option-btn:hover {
-            border-color: #007bff;
-            background-color: #f8f9ff;
-        }
-        .option-btn.correct {
-            background-color: #28a745;
-            color: white;
-            border-color: #28a745;
-        }
-        .option-btn.incorrect {
-            background-color: #dc3545;
-            color: white;
-            border-color: #dc3545;
-        }
-        .option-btn:disabled {
-            cursor: not-allowed;
-        }
-        .score-section {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-bottom: 30px;
-            text-align: center;
-        }
-        .score-item {
-            display: inline-block;
-            margin: 0 20px;
-            padding: 10px 20px;
-            border-radius: 25px;
-            font-weight: bold;
-        }
-        .score-correct {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        .score-incorrect {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-        .feedback-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0,0,0,0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
-        .feedback-content {
-            background: white;
-            padding: 40px;
-            border-radius: 15px;
-            text-align: center;
-            max-width: 500px;
-            margin: 20px;
-        }
-        .feedback-text {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .feedback-correct {
-            color: #28a745;
-        }
-        .feedback-incorrect {
-            color: #dc3545;
-        }
-        .next-btn {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-size: 1.1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .next-btn:hover {
-            background-color: #0056b3;
-        }
-        .history-section {
-            background: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-            padding: 20px;
-            margin-top: 30px;
-        }
-        .history-item {
-            padding: 10px;
-            margin: 5px 0;
-            border-radius: 8px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .history-correct {
-            background-color: #d4edda;
-            color: #155724;
-        }
-        .history-incorrect {
-            background-color: #f8d7da;
-            color: #721c24;
-        }
-        .restart-btn {
-            background-color: #6c757d;
-            color: white;
-            border: none;
-            padding: 10px 25px;
-            border-radius: 20px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-        .restart-btn:hover {
-            background-color: #545b62;
         }
         .logo {
             max-width: 60px;
             height: auto;
             margin-bottom: 20px;
         }
-        .header-section {
-            text-align: center;
+        .options-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
             margin-bottom: 30px;
+        }
+        .options-title {
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .options-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+        .option-btn {
+            padding: 30px 20px;
+            border: 2px solid #dee2e6;
+            background: white;
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            text-align: center;
+            font-size: 1rem;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+        .option-btn:hover {
+            border-color: #007bff;
+            background-color: #f8f9ff;
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+            color: inherit;
+            text-decoration: none;
+        }
+        .option-btn:active {
+            transform: translateY(-2px);
+        }
+        .option-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .vocabulario-icon {
+            color: #6f42c1;
+        }
+        .saudacoes-icon {
+            color: #fd7e14;
+        }
+        .sincretismos-icon {
+            color: #20c997;
+        }
+        .xango-icon {
+            color: #ff6b35;
+        }
+        .chefes-icon {
+            color: #6f42c1;
+        }
+        .simbolos-icon {
+            color: #e83e8c;
+        }
+        .option-title {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+        .option-description {
+            font-size: 0.95rem;
+            color: #666;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+        .option-stats {
+            font-size: 0.85rem;
+            color: #888;
+            font-style: italic;
+        }
+        .footer-section {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        .footer-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            color: #495057;
+            margin-bottom: 10px;
+        }
+        .footer-description {
+            font-size: 0.9rem;
+            color: #666;
+            line-height: 1.5;
         }
     </style>
 </head>
 <body>
     <div class="quiz-container">
         <div class="header-section">
-            <img src="logo.png" alt="Logo Quiz Vocabulário Técnico" class="logo">
-            <h1 class="display-4 mb-3">Vocabulário TUNO</h1>
+            <img src="logo.png" alt="Logo TUNO" class="logo">
+            <h1 class="display-4 mb-3">TUNO</h1>
+            <p class="lead">Terminologia da Umbanda para Novos Ogãs</p>
         </div>
 
-        <div class="score-section">
-            <div class="score-item score-correct">
-                <i class="fas fa-check-circle"></i>
-                Acertos: <span id="correct-count">0</span>
+        <div class="options-card">
+            <div class="options-title">
+                Escolha o tipo de quiz que deseja realizar:
             </div>
-            <div class="score-item score-incorrect">
-                <i class="fas fa-times-circle"></i>
-                Erros: <span id="incorrect-count">0</span>
-            </div>
-            <div class="score-item">
-                <strong>Total: <span id="total-count">0</span></strong>
+            
+            <div class="options-grid">
+                <a href="vocabulario.html" class="option-btn">
+                    <span class="option-icon vocabulario-icon">📚</span>
+                    <div class="option-title">Vocabulário</div>
+                    <div class="option-description">
+                        Teste seus conhecimentos sobre os termos tradicionais da Umbanda, 
+                        incluindo objetos, rituais, hierarquia e práticas sagradas.
+                    </div>
+                    <div class="option-stats">85 termos disponíveis</div>
+                </a>
+
+                <a href="saudacoes.html" class="option-btn">
+                    <span class="option-icon saudacoes-icon">🙏</span>
+                    <div class="option-title">Saudações</div>
+                    <div class="option-description">
+                        Aprenda as saudações corretas para cada Orixá e entidade espiritual, 
+                        fundamentais para o respeito e reverência no terreiro.
+                    </div>
+                    <div class="option-stats">18 saudações disponíveis</div>
+                </a>
+
+                <a href="sincretismos.html" class="option-btn">
+                    <span class="option-icon sincretismos-icon">⚖️</span>
+                    <div class="option-title">Sincretismos</div>
+                    <div class="option-description">
+                        Estude as correspondências entre os Orixás da Umbanda e os santos 
+                        católicos, essencial para compreender a tradição sincrética.
+                    </div>
+                    <div class="option-stats">17 sincretismos disponíveis</div>
+                </a>
+
+                <a href="sincretismosXango.html" class="option-btn">
+                    <span class="option-icon xango-icon">⚡</span>
+                    <div class="option-title">Sincretismos de Xangô</div>
+                    <div class="option-description">
+                        Conheça os diversos sincretismos específicos de Xangô, o Orixá da 
+                        justiça, do fogo e dos raios, com os santos católicos.
+                    </div>
+                    <div class="option-stats">9 sincretismos disponíveis</div>
+                </a>
+
+                <a href="chefesDeFalanges.html" class="option-btn">
+                    <span class="option-icon chefes-icon">👑</span>
+                    <div class="option-title">Chefes de Falange</div>
+                    <div class="option-description">
+                        Aprenda sobre os Chefes de Falange da Umbanda, entidades 
+                        responsáveis por comandar as diferentes falanges espirituais.
+                    </div>
+                    <div class="option-stats">13 chefes disponíveis</div>
+                </a>
+
+                <a href="simbolos.html" class="option-btn">
+                    <span class="option-icon simbolos-icon">🔯</span>
+                    <div class="option-title">Símbolos dos Orixás</div>
+                    <div class="option-description">
+                        Identifique os símbolos sagrados dos Orixás através de imagens 
+                        e aprenda sobre seu significado espiritual na Umbanda.
+                    </div>
+                    <div class="option-stats">22 símbolos disponíveis</div>
+                </a>
             </div>
         </div>
 
-        <div id="quiz-section">
-            <div class="question-card">
-                <div class="question-text" id="question-text">
-                    Carregando pergunta...
-                </div>
-                <div class="options-grid" id="options-grid">
-                    <!-- Options will be dynamically generated -->
-                </div>
+        <div class="footer-section">
+            <div class="footer-title">Sobre essa ferramenta</div>
+            <div class="footer-description">
+                Essa é uma ferramenta educativa desenvolvida para auxiliar no aprendizado 
+                da terminologia sagrada dos rituais de Umbanda para a obrigação de orixalá.
             </div>
-        </div>
-
-        <div class="text-center">
-            <button class="restart-btn" onclick="restartQuiz()">Reiniciar Quiz</button>
-        </div>
-
-        <div class="history-section">
-            <h4 class="mb-3">Histórico de Erros</h4>
-            <div id="history-list">
-                <p class="text-muted text-center">Nenhum erro ainda...</p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Feedback Overlay -->
-    <div id="feedback-overlay" class="feedback-overlay" style="display: none;">
-        <div class="feedback-content">
-            <div id="feedback-text" class="feedback-text"></div>
-            <div id="feedback-explanation" class="mb-3"></div>
-            <button class="next-btn" onclick="nextQuestion()">Próxima Pergunta</button>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="vocabulario.js"></script>
     <script>
-
-        let currentQuestion = 0;
-        let correctAnswers = 0;
-        let incorrectAnswers = 0;
-        let currentOptions = [];
-        let correctAnswer = "";
-        let history = [];
-        let usedQuestions = [];
-
-        function shuffleArray(array) {
-            const shuffled = [...array];
-            for (let i = shuffled.length - 1; i > 0; i--) {
-                const j = Math.floor(Math.random() * (i + 1));
-                [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-            }
-            return shuffled;
-        }
-
-        function generateOptions(correctTerm) {
-            const otherTerms = termos.filter(t => t.termo !== correctTerm);
-            const shuffledOthers = shuffleArray(otherTerms);
-            const options = [correctTerm, ...shuffledOthers.slice(0, 8).map(t => t.termo)];
-            return shuffleArray(options);
-        }
-
-        function loadQuestion() {
-            if (usedQuestions.length === termos.length) {
-                showCompletionMessage();
-                return;
-            }
-
-            let availableQuestions = termos.filter((_, index) => !usedQuestions.includes(index));
-            let randomIndex = Math.floor(Math.random() * availableQuestions.length);
-            let selectedQuestion = availableQuestions[randomIndex];
-            
-            // Find the original index
-            let originalIndex = termos.findIndex(t => t.termo === selectedQuestion.termo);
-            usedQuestions.push(originalIndex);
-
-            currentQuestion = originalIndex;
-            correctAnswer = selectedQuestion.termo;
-            currentOptions = generateOptions(correctAnswer);
-
-            document.getElementById('question-text').textContent = selectedQuestion.explicacao;
-            
-            const optionsGrid = document.getElementById('options-grid');
-            optionsGrid.innerHTML = '';
-            
-            currentOptions.forEach(option => {
-                const button = document.createElement('button');
-                button.className = 'option-btn';
-                button.textContent = option;
-                button.onclick = () => selectAnswer(option, button);
-                optionsGrid.appendChild(button);
-            });
-
-            updateScore();
-        }
-
-        function selectAnswer(selectedOption, button) {
-            const isCorrect = selectedOption === correctAnswer;
-            const allButtons = document.querySelectorAll('.option-btn');
-            
-            // Disable all buttons
-            allButtons.forEach(btn => btn.disabled = true);
-            
-            if (isCorrect) {
-                button.classList.add('correct');
-                correctAnswers++;
-                showFeedback(true, correctAnswer);
-                // Não adiciona acertos ao histórico
-            } else {
-                button.classList.add('incorrect');
-                // Highlight the correct answer
-                allButtons.forEach(btn => {
-                    if (btn.textContent === correctAnswer) {
-                        btn.classList.add('correct');
-                    }
-                });
-                incorrectAnswers++;
-                showFeedback(false, correctAnswer);
-                addToHistory(correctAnswer, selectedOption, false);
-            }
-            
-            updateScore();
-        }
-
-        function showFeedback(isCorrect, correctTerm) {
-            const overlay = document.getElementById('feedback-overlay');
-            const feedbackText = document.getElementById('feedback-text');
-            const feedbackExplanation = document.getElementById('feedback-explanation');
-            
-            // Find the term's explanation
-            const termData = termos.find(t => t.termo === correctTerm);
-            const termExplanation = termData ? termData.explicacao : '';
-            
-            if (isCorrect) {
-                feedbackText.textContent = 'CORRETO! 🎉';
-                feedbackText.className = 'feedback-text feedback-correct';
-                feedbackExplanation.innerHTML = `
-                    <strong>Você acertou!</strong><br><br>
-                    <strong style="font-size: 1.2em; color: #28a745;">${correctTerm}</strong><br>
-                    <span style="font-style: italic; color: #666; line-height: 1.4;">${termExplanation}</span>
-                `;
-            } else {
-                feedbackText.textContent = 'INCORRETO! ❌';
-                feedbackText.className = 'feedback-text feedback-incorrect';
-                feedbackExplanation.innerHTML = `
-                    <strong>A resposta correta era:</strong><br><br>
-                    <strong style="font-size: 1.2em; color: #dc3545;">${correctTerm}</strong><br>
-                    <span style="font-style: italic; color: #666; line-height: 1.4;">${termExplanation}</span>
-                `;
-            }
-            
-            overlay.style.display = 'flex';
-        }
-
-        function nextQuestion() {
-            document.getElementById('feedback-overlay').style.display = 'none';
-            loadQuestion();
-        }
-
-        function updateScore() {
-            document.getElementById('correct-count').textContent = correctAnswers;
-            document.getElementById('incorrect-count').textContent = incorrectAnswers;
-            document.getElementById('total-count').textContent = correctAnswers + incorrectAnswers;
-        }
-
-        function addToHistory(correctTerm, selectedTerm, isCorrect) {
-            const historyItem = {
-                correct: correctTerm,
-                selected: selectedTerm,
-                isCorrect: isCorrect,
-                timestamp: new Date().toLocaleTimeString()
-            };
-            
-            history.push(historyItem);
-            updateHistoryDisplay();
-        }
-
-        function updateHistoryDisplay() {
-            const historyList = document.getElementById('history-list');
-            
-            if (history.length === 0) {
-                historyList.innerHTML = '<p class="text-muted text-center">Nenhum erro ainda...</p>';
-                return;
-            }
-            
-            historyList.innerHTML = '';
-            
-            history.slice(-10).reverse().forEach(item => {
-                const div = document.createElement('div');
-                div.className = 'history-item history-incorrect';
-                
-                // Find the term's explanation
-                const termData = termos.find(t => t.termo === item.correct);
-                const termExplanation = termData ? termData.explicacao : '';
-                
-                const content = document.createElement('div');
-                content.innerHTML = `
-                    <strong>${item.correct}</strong><br>
-                    <small style="font-style: italic; color: #666;">${termExplanation}</small><br>
-                    <small style="color: #721c24;">Você respondeu: ${item.selected}</small>
-                `;
-                
-                const status = document.createElement('div');
-                status.innerHTML = `
-                    <span>❌</span><br>
-                    <small>${item.timestamp}</small>
-                `;
-                
-                div.appendChild(content);
-                div.appendChild(status);
-                historyList.appendChild(div);
-            });
-        }
-
-        function showCompletionMessage() {
-            const overlay = document.getElementById('feedback-overlay');
-            const feedbackText = document.getElementById('feedback-text');
-            const feedbackExplanation = document.getElementById('feedback-explanation');
-            
-            feedbackText.textContent = 'Quiz Completo! 🎊';
-            feedbackText.className = 'feedback-text feedback-correct';
-            feedbackExplanation.innerHTML = `
-                <strong>Parabéns!</strong><br>
-                Você completou todas as perguntas!<br>
-                Acertos: ${correctAnswers}<br>
-                Erros: ${incorrectAnswers}<br>
-                Precisão: ${((correctAnswers / (correctAnswers + incorrectAnswers)) * 100).toFixed(1)}%
-            `;
-            
-            document.querySelector('.next-btn').textContent = 'Reiniciar Quiz';
-            document.querySelector('.next-btn').onclick = restartQuiz;
-            
-            overlay.style.display = 'flex';
-        }
-
-        function restartQuiz() {
-            correctAnswers = 0;
-            incorrectAnswers = 0;
-            currentQuestion = 0;
-            history = [];
-            usedQuestions = [];
-            
-            document.getElementById('feedback-overlay').style.display = 'none';
-            document.querySelector('.next-btn').textContent = 'Próxima Pergunta';
-            document.querySelector('.next-btn').onclick = nextQuestion;
-            
-            updateScore();
-            updateHistoryDisplay();
-            loadQuestion();
-        }
-
-        // Initialize the quiz
+        // Adiciona animação de entrada
         document.addEventListener('DOMContentLoaded', function() {
-            loadQuestion();
+            const optionBtns = document.querySelectorAll('.option-btn');
+            optionBtns.forEach((btn, index) => {
+                btn.style.opacity = '0';
+                btn.style.transform = 'translateY(30px)';
+                
+                setTimeout(() => {
+                    btn.style.transition = 'all 0.6s ease';
+                    btn.style.opacity = '1';
+                    btn.style.transform = 'translateY(0)';
+                }, index * 200 + 300);
+            });
         });
     </script>
 </body>
