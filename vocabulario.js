@@ -248,7 +248,7 @@ termos = [
         "explicacao": "Sentar"
     },
     {
-        "termo": "Addê",
+        "termo": "Adidé",
         "explicacao": "Levantar"
     },
     {

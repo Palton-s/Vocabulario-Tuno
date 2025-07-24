@@ -11,7 +11,7 @@ const saudacoes = [
     { termo: "Obaluaê / Omolu", explicacao: "Atotô" },
     { termo: "São Miguel e Pretos-Velhos", explicacao: "Adorei as Almas" },
     { termo: "Marinheiro", explicacao: "Aruba Marinheiro" },
-    { termo: "Boiadeiro", explicacao: "Epahé Boiadeiro, Arubachê, Getruá" },
+    { termo: "Boiadeiro", explicacao: "Epachê Boiadeiro, Arubachê, Getruá" },
     { termo: "Povo Cigano", explicacao: "Optchá" },
     { termo: "Povo do Oriente", explicacao: "Ori Osorium" },
     { termo: "Exu", explicacao: "Laroyê" },

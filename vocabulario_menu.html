@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TUNO - Menu Vocabulário</title>
+    <link rel="icon" type="image/png" href="logo.png">
+    <link rel="shortcut icon" type="image/png" href="logo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header-section {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .logo {
+            max-width: 80px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+        .menu-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+        .quiz-option {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            margin: 20px 0;
+            border-radius: 15px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+        .quiz-option:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+            color: white;
+            text-decoration: none;
+        }
+        .quiz-option h3 {
+            margin-bottom: 15px;
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+        .quiz-option p {
+            margin-bottom: 0;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+        .quiz-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            display: block;
+        }
+        .back-section {
+            text-align: center;
+            margin-top: 30px;
+        }
+        .btn-back {
+            background-color: #6c757d;
+            border-color: #6c757d;
+            color: white;
+            padding: 12px 30px;
+            font-size: 1.1rem;
+            border-radius: 8px;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .btn-back:hover {
+            background-color: #5a6268;
+            border-color: #545b62;
+            color: white;
+            text-decoration: none;
+        }
+        .vocabulary-traditional {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .vocabulary-meanings {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-section">
+            <img src="logo.png" alt="Logo TUNO" class="logo">
+            <h1 class="display-4 mb-3">TUNO</h1>
+            <p class="lead">Menu de Vocabulário</p>
+            <p class="text-muted">Escolha o tipo de quiz de vocabulário que deseja fazer</p>
+        </div>
+
+        <div class="menu-card">
+            <div class="row">
+                <div class="col-md-4">
+                    <a href="vocabulario.html" class="quiz-option vocabulary-traditional">
+                        <span class="quiz-icon">📚</span>
+                        <h3>Vocabulário Tradicional</h3>
+                        <p>Quiz tradicional onde você vê o termo e escolhe o significado correto entre as opções</p>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="vocabulario_quiz.html" class="quiz-option vocabulary-meanings">
+                        <span class="quiz-icon">✍️</span>
+                        <h3>Vocabulário com Digitação</h3>
+                        <p>Veja o termo da Umbanda e digite o significado correto usando autocompletar</p>
+                    </a>
+                </div>
+                <div class="col-md-4">
+                    <a href="saudacoes_quiz.html" class="quiz-option" style="background: linear-gradient(135deg, #20c997 0%, #17a2b8 100%);">
+                        <span class="quiz-icon">🙏</span>
+                        <h3>Saudações com Digitação</h3>
+                        <p>Veja o Orixá ou entidade e digite a saudação correta usando autocompletar</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="back-section">
+            <a href="index.html" class="btn btn-back">
+                🏠 Voltar à Página Inicial
+            </a>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
