@@ -3,7 +3,7 @@ const saudacoes = [
     { termo: "Xangô", explicacao: "Kao Kabecile (Salve o Rei)" },
     { termo: "Ibeji", explicacao: "Oni Beijada" },
     { termo: "Iemanjá", explicacao: "Odociaba ou Odoyá" },
-    { termo: "Oxum", explicacao: "Atêiê Omin" },
+    { termo: "Oxum", explicacao: "Aiêiê Omin" },
     { termo: "Iansã", explicacao: "Eparrei Iansã" },
     { termo: "Nanã Buruquê", explicacao: "Saluba Nanã" },
     { termo: "Oxóssi", explicacao: "Okê Bambociíne / Okê Arô" },
