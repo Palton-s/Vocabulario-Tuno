@@ -8,7 +8,7 @@ const saudacoes = [
     { termo: "Nanã Buruquê", explicacao: "Saluba Nanã" },
     { termo: "Oxóssi", explicacao: "Okê Bambociíne / Okê Arô" },
     { termo: "Ogum", explicacao: "Ogum Iê" },
-    { termo: "Obaluê / Omolu", explicacao: "Atotô" },
+    { termo: "Obaluaê / Omolu", explicacao: "Atotô" },
     { termo: "São Miguel e Pretos-Velhos", explicacao: "Adorei as Almas" },
     { termo: "Marinheiro", explicacao: "Aruba Marinho" },
     { termo: "Boiadeiro", explicacao: "Epahé Boiadeiro, Arubachê, Getruá" },

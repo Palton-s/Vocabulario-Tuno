@@ -10,7 +10,7 @@ const sincretismos = [
     { termo: "Oxóssi", explicacao: "São Sebastião" },
     { termo: "Ogum", explicacao: "São Jorge Guerreiro" },
     { termo: "Omulu", explicacao: "São Lázaro" },
-    { termo: "Obaluáe", explicacao: "São Roque" },
+    { termo: "Obaluaê", explicacao: "São Roque" },
     { termo: "Bará", explicacao: "Lúcifer" },
     { termo: "Iroko", explicacao: "Orixá do Tempo) São Cipriano" },
     { termo: "Oxumarê", explicacao: "São Bartolomeu e Santa Catarina" },
