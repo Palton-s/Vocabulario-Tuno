@@ -6,7 +6,7 @@ const saudacoes = [
     { termo: "Oxum", explicacao: "Aiêiê Omin" },
     { termo: "Iansã", explicacao: "Eparrei Iansã" },
     { termo: "Nanã Buruquê", explicacao: "Saluba Nanã" },
-    { termo: "Oxóssi", explicacao: "Okê Bambociíne / Okê Arô" },
+    { termo: "Oxóssi", explicacao: "Okê Bambiocline / Okê Arô" },
     { termo: "Ogum", explicacao: "Ogum Iê" },
     { termo: "Obaluaê / Omolu", explicacao: "Atotô" },
     { termo: "São Miguel e Pretos-Velhos", explicacao: "Adorei as Almas" },
