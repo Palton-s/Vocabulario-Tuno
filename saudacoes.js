@@ -15,6 +15,6 @@ const saudacoes = [
     { termo: "Povo Cigano", explicacao: "Optchá" },
     { termo: "Povo do Oriente", explicacao: "Ori Osorium" },
     { termo: "Exu", explicacao: "Laroyê" },
-    { termo: "Tranca Rua", explicacao: "Aleluia ou Onoluá" },
+    { termo: "Tranca Rua", explicacao: "Aleluia ou Onoluia" },
     { termo: "Bará", explicacao: "Moju Bará" }
 ];
