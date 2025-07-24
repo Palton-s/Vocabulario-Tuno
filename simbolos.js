@@ -120,7 +120,7 @@ const simbolos = [
     },
     {
         orixa: "Iemanjá",
-        cor: "azul escuro",
+        cor: "azul claro",
         simbolos: [
             {
                 nome: "Âncora",
